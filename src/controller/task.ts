@@ -26,3 +26,27 @@ export async function getTasks(req: any, res : Response, next : NextFunction) : 
         next(error)
     }
 }
+
+export async function updateTask(req: any, res : Response, next : NextFunction) : Promise<void>{
+    try{
+        logger.info(TAG + "updateTask()");
+        const taskId = parseInt(req.params.taskId)
+        const response : IServiceResponse = await Service.updateTask(req.body,taskId );
+        responseBuilder(response, res, next, req)
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.getTasks()`, error);
+        next(error)
+    }
+}
+
+export async function updateTaskStatus(req : any, res : Response, next : NextFunction) : Promise<void>{
+    try{
+        logger.info(TAG + 'updateTaskStatus()')
+        const taskId = parseInt(req.params.taskId)
+        const response : IServiceResponse = await Service.updateTaskStatus(taskId);;
+        responseBuilder(response, res, next, req);
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.updateTaskStatus()`, error );
+        next(error);
+    }
+}

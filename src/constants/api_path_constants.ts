@@ -1,2 +1,4 @@
 export const ROUTER_DUMMY = '/dummy';
-export const ROUTER_TASK = '/tasks:'
+export const TASKS = '/tasks'
+export const UPDATE_TASK = `${TASKS}/:taskId`
+export const UPDATE_TASK_STATUS = `${UPDATE_TASK}/complete`

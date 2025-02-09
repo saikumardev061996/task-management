@@ -65,3 +65,59 @@ export async function getTasks() {
     return serviceResponse
     
 }
+
+export async function updateTask(task:any, taskId : number) {
+    logger.info(TAG + '.updateTask()');
+    const serviceResponse : IServiceResponse = new ServiceResponse(HttpStatusCodes.OK, "Task updated successfully");
+    let connection = null;
+    try{
+        connection = await getConnection();
+        const isTaskIdExist = await Task.checkTaskIdExist(connection,taskId)
+        if(!isTaskIdExist){
+            serviceResponse.addBadRequestError(`Title id doesn't exist`);
+            return serviceResponse;
+        }
+        if(!task.dueDate) {
+            task.dueDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+        }
+        const taskDetails = await Task.updateTask(connection, task, taskId);
+        serviceResponse.data = taskDetails
+        
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.updateTask()`, error);
+        serviceResponse.addBadRequestError('Failed to update task due to tech difficulties');
+
+    }finally{
+        await releaseConnection(connection);
+    }
+    return serviceResponse
+
+}
+
+export async function updateTaskStatus(taskId : number){
+    logger.info(TAG + '.updateTaskStatus()');
+    const serviceResponse : IServiceResponse = new ServiceResponse(HttpStatusCodes.OK, "Task status updated successfully");
+    let connection = null;
+    try{
+        connection = await getConnection();
+        const taskStatus = 'completed'
+        const isTaskIdExist = await Task.checkTaskIdExist(connection,taskId)
+        if(!isTaskIdExist){
+            serviceResponse.addBadRequestError(`Title id doesn't exist`);
+            return serviceResponse;
+        }
+        const taskDetails = await Task.updateTaskStatus(connection, taskId, taskStatus)
+        serviceResponse.data = {
+            taskDetails
+        }
+
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.updateTaskStatus()`, error);
+        serviceResponse.addBadRequestError('Failed to update status due to tech difficulties');
+
+    }finally{
+        await releaseConnection(connection);
+    }
+    return serviceResponse
+
+}
