@@ -34,8 +34,8 @@ export const PG_DATABASE = {
     port: parseInt(process.env.SQL_DATABASE_PORT || '5432'),
     username: process.env.SQL_DATABASE_USERNAME,
     password: process.env.SQL_DATABASE_PASSWORD,
-    db_name: process.env.SQL_DATABASE_NAME || '',
-    options: process.env.SQL_DATABASE_OPTIONS || "-c search_path=test_schema",
+    db_name: process.env.SQL_DATABASE_NAME || 'task',
+    options: process.env.SQL_DATABASE_OPTIONS || "-c search_path=test_schm",
     pool_size: parseInt(process.env.SQL_DATABASE_POOL_SIZE || '30'),
 };
 
