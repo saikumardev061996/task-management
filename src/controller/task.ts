@@ -27,6 +27,18 @@ export async function getTasks(req: any, res : Response, next : NextFunction) : 
     }
 }
 
+export async function getTasksSearch(req:any, res : Response, next : NextFunction) : Promise<void>{
+    try{
+        logger.info(TAG + "getTasksSearch()");
+        const search  = req.query.search
+        const response : IServiceResponse = await Service.getTasks(search);
+        responseBuilder(response, res, next, req);
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.getTasksSearch()`, error);
+        next(error)
+    }
+}
+
 export async function updateTask(req: any, res : Response, next : NextFunction) : Promise<void>{
     try{
         logger.info(TAG + "updateTask()");
@@ -48,5 +60,18 @@ export async function updateTaskStatus(req : any, res : Response, next : NextFun
     }catch(error){
         logger.error(`Error occured in ${TAG}.updateTaskStatus()`, error );
         next(error);
+    }
+}
+
+
+export async function deleteTask(req: any, res : Response, next : NextFunction) : Promise<void>{
+    try{
+        logger.info(TAG + "deleteTask()");
+        const taskId = parseInt(req.params.taskId)
+        const response : IServiceResponse = await Service.deleteTask(taskId );
+        responseBuilder(response, res, next, req)
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.deleteTask()`, error);
+        next(error)
     }
 }

@@ -9,9 +9,11 @@ router.route(APIPaths.TASKS)
 
 router.route(APIPaths.UPDATE_TASK)
     .put(controller.updateTask)
+    .delete(controller.deleteTask)
 
 router.route(APIPaths.UPDATE_TASK_STATUS)
     .put(controller.updateTaskStatus)
-
+router.route(APIPaths.SEARCH_TASK)
+    .get(controller.getTasksSearch)
 
 export default router;

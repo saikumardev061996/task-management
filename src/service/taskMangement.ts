@@ -31,13 +31,14 @@ export async function saveTask(task:any) {
     return serviceResponse
 
 }
-export async function getTasks() {
+export async function getTasks(search? : string) {
     logger.info(TAG + '.saveTask()');
     const serviceResponse : IServiceResponse = new ServiceResponse(HttpStatusCodes.OK, "Task details fetched  successfully");
     let connection = null;
     try {
         connection = await getConnection();
-        const taskDetails = await Task.getTasks(connection);
+        const taskDetails = await Task.getTasks(connection, search);
+        console.log(taskDetails)
         const tasks = taskDetails.map(task => {
             let status = 'Pending';
             const taskDueDate = new Date(task.due_date);
@@ -114,6 +115,31 @@ export async function updateTaskStatus(taskId : number){
     }catch(error){
         logger.error(`Error occured in ${TAG}.updateTaskStatus()`, error);
         serviceResponse.addBadRequestError('Failed to update status due to tech difficulties');
+
+    }finally{
+        await releaseConnection(connection);
+    }
+    return serviceResponse
+
+}
+
+export async function deleteTask( taskId : number) {
+    logger.info(TAG + '.deleteTask()');
+    const serviceResponse : IServiceResponse = new ServiceResponse(HttpStatusCodes.OK, "Task deleted successfully");
+    let connection = null;
+    try{
+        connection = await getConnection();
+        const isTaskIdExist = await Task.checkTaskIdExist(connection,taskId)
+        if(!isTaskIdExist){
+            serviceResponse.addBadRequestError(`Task id doesn't exist`);
+            return serviceResponse;
+        }
+        const taskDetails = await Task.deleteTask(connection, taskId);
+        serviceResponse.data = taskDetails
+        
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.deleteTask()`, error);
+        serviceResponse.addBadRequestError('Failed to update task due to tech difficulties');
 
     }finally{
         await releaseConnection(connection);

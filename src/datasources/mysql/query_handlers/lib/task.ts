@@ -1,7 +1,7 @@
 
 import logger from "@logger";
 import { PoolClient } from "pg";
-import { fetchRecord, fetchRecords, saveRecord, updateRecord } from "@db/helpers/query_execution";
+import { deleteRecord, fetchRecord, fetchRecords, saveRecord, updateRecord } from "@db/helpers/query_execution";
 const TAG = 'data_store_mysql_lib_task';
 
 export async function checkTaskTitleExist(connection : PoolClient,title : string): Promise<any> {
@@ -44,10 +44,14 @@ export async function saveTask(connection : PoolClient, task) : Promise<any>{
     }
 }
 
-export async function getTasks(connection : PoolClient): Promise<any> {
+export async function getTasks(connection : PoolClient, search? : string): Promise<any> {
     logger.info(`${TAG}.getTasks()`);
     try{
-        const query : string = `select * from task`;
+        let query : string = `select * from task`
+        if(search){
+            query = query + ` WHERE title ILIKE '%${search}%' OR description ILIKE '%${search}%'`
+        }
+        
         const result = await fetchRecords(connection, query, [])
         return result
     }catch(error){
@@ -87,4 +91,18 @@ export async function updateTaskStatus(connection : PoolClient, taskId : number,
         throw error;
     }
 
+}
+
+export async function deleteTask(connection : PoolClient, taskId : number) : Promise<any>{
+    logger.info(`${TAG}.deleteTask()`);
+    try{
+        const query : string = `DELETE FROM  task  WHERE task_id = $1`
+        const result = await deleteRecord(connection, query, [
+            taskId 
+        ])
+        return result
+    }catch(error){
+        logger.error(`Error occured in ${TAG}.deleteTask()`, error);
+        throw error;
+    }
 }
