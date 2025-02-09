@@ -1,0 +1,32 @@
+{
+  "name": "ecom_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc --project tsconfig.json && npx tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "start": "node -r tsconfig-paths/register dist/index.js",
+    "dev": "nodemon -r tsconfig-paths/register src/index.ts"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}

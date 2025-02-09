@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 15
+    },
+    "auditLog": "C:\\Users\\saiku\\Downloads\\task-management\\backend\\logs\\.a41a06da4436f37dd6031256a12e1d18a91f8976-audit.json",
+    "files": [
+        {
+            "date": 1739076871447,
+            "name": "C:\\Users\\saiku\\Downloads\\task-management\\backend\\logs\\careerpedia-2025-02-09.log",
+            "hash": "4f82860083ec8ce2c004e37591dc0fedafb248097745767ae344080966210dd0"
+        }
+    ],
+    "hashType": "sha256"
+}

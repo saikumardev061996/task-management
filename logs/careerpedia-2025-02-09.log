@@ -1,0 +1,105 @@
+2025-02-09 10:24:32 index.ts[error]: ERROR occurred in datasources/mongodb/helpers/database.mongoConnection()  Authentication failed. MongoServerError: Authentication failed.
+    at Connection.sendCommand (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:545:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:617:22)
+    at async executeScram (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:113:20)
+    at async ScramSHA256.auth (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:60:12)
+    at async performInitialHandshake (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:164:7)
+    at async connect (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:43:5)
+2025-02-09 10:25:07 index.ts[error]: ERROR occurred in datasources/mongodb/helpers/database.mongoConnection()  Authentication failed. MongoServerError: Authentication failed.
+    at Connection.sendCommand (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:545:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:617:22)
+    at async executeScram (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:113:20)
+    at async ScramSHA256.auth (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:60:12)
+    at async performInitialHandshake (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:164:7)
+    at async connect (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:43:5)
+2025-02-09 10:25:17 index.ts[error]: ERROR occurred in datasources/mongodb/helpers/database.mongoConnection()  Authentication failed. MongoServerError: Authentication failed.
+    at Connection.sendCommand (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:545:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connection.ts:617:22)
+    at async executeScram (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:113:20)
+    at async ScramSHA256.auth (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\auth\scram.ts:60:12)
+    at async performInitialHandshake (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:164:7)
+    at async connect (C:\Users\saiku\Downloads\task-management\backend\node_modules\mongodb\src\cmap\connect.ts:43:5)
+2025-02-09 10:25:43 index.ts[info]: Mongo connection initialised successfully!!! 
+2025-02-09 10:25:43 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:25:43 index.ts[info]: initializeRoutes() 
+2025-02-09 10:25:43 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:31:36 index.ts[info]: Mongo connection initialised successfully!!! 
+2025-02-09 10:31:36 index.ts[info]: sqlConnection() 
+2025-02-09 10:31:36 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=some_schema","pool_size":30} 
+2025-02-09 10:31:36 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:31:36 index.ts[info]: initializeRoutes() 
+2025-02-09 10:31:36 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:31:46 index.ts[info]: Mongo connection initialised successfully!!! 
+2025-02-09 10:31:46 index.ts[info]: sqlConnection() 
+2025-02-09 10:31:46 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=some_schema","pool_size":30} 
+2025-02-09 10:31:46 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:31:46 index.ts[info]: initializeRoutes() 
+2025-02-09 10:31:46 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:31:57 index.ts[info]: sqlConnection() 
+2025-02-09 10:31:57 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=some_schema","pool_size":30} 
+2025-02-09 10:31:57 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:31:57 index.ts[info]: initializeRoutes() 
+2025-02-09 10:31:57 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:35:02 index.ts[info]: sqlConnection() 
+2025-02-09 10:35:02 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=some_schema","pool_size":30} 
+2025-02-09 10:35:02 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:35:02 index.ts[info]: initializeRoutes() 
+2025-02-09 10:35:02 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:35:08 index.ts[info]: sqlConnection() 
+2025-02-09 10:35:08 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=some_schema","pool_size":30} 
+2025-02-09 10:35:08 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:35:08 index.ts[info]: initializeRoutes() 
+2025-02-09 10:35:08 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:35:13 index.ts[info]: sqlConnection() 
+2025-02-09 10:35:13 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":3306,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:35:13 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:35:13 index.ts[info]: initializeRoutes() 
+2025-02-09 10:35:13 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:35:30 index.ts[info]: sqlConnection() 
+2025-02-09 10:35:30 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":null,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:35:30 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:35:30 index.ts[info]: initializeRoutes() 
+2025-02-09 10:35:30 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:35:32 index.ts[info]: sqlConnection() 
+2025-02-09 10:35:32 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:35:32 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:35:32 index.ts[info]: initializeRoutes() 
+2025-02-09 10:35:32 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:36:27 index.ts[info]: sqlConnection() 
+2025-02-09 10:36:27 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:36:27 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:36:27 index.ts[info]: initializeRoutes() 
+2025-02-09 10:36:27 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:36:36 index.ts[info]: sqlConnection() 
+2025-02-09 10:36:36 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:36:36 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:36:36 index.ts[info]: initializeRoutes() 
+2025-02-09 10:36:36 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:36:39 index.ts[info]: sqlConnection() 
+2025-02-09 10:36:39 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:36:39 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:36:39 index.ts[info]: initializeRoutes() 
+2025-02-09 10:36:39 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:36:50 index.ts[info]: sqlConnection() 
+2025-02-09 10:36:50 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:36:50 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:36:50 index.ts[info]: initializeRoutes() 
+2025-02-09 10:36:50 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:37:33 index.ts[info]: sqlConnection() 
+2025-02-09 10:37:33 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:37:33 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:37:33 index.ts[info]: initializeRoutes() 
+2025-02-09 10:37:33 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:37:37 index.ts[info]: sqlConnection() 
+2025-02-09 10:37:37 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:37:37 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:37:37 index.ts[info]: initializeRoutes() 
+2025-02-09 10:37:37 index.ts[info]: SERVER listening on PORT:8001 
+2025-02-09 10:37:53 index.ts[info]: sqlConnection() 
+2025-02-09 10:37:53 index.ts[debug]: creating connection pool with config: {"host":"localhost","port":5432,"db_name":"","options":"-c search_path=test_schema","pool_size":30} 
+2025-02-09 10:37:53 index.ts[info]: initializationExpressServer() 
+2025-02-09 10:37:53 index.ts[info]: initializeRoutes() 
+2025-02-09 10:37:53 index.ts[info]: SERVER listening on PORT:8001 

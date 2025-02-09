@@ -1,0 +1,32 @@
+2025-01-26 23:21:29 index.ts[error]: ERROR occurred in datasources/mongodb/helpers/database.mongoConnection()  Authentication failed. MongoServerError: Authentication failed.
+    at Connection.sendCommand (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connection.ts:545:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connection.ts:617:22)
+    at async executeScram (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/auth/scram.ts:113:20)
+    at async ScramSHA256.auth (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/auth/scram.ts:60:12)
+    at async performInitialHandshake (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connect.ts:164:7)
+    at async connect (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connect.ts:43:5)
+2025-01-26 23:22:13 index.ts[info]: initializationExpressServer() 
+2025-01-26 23:22:13 index.ts[info]: initializeRoutes() 
+2025-01-26 23:22:13 index.ts[info]: SERVER listening on PORT:8001 
+2025-01-26 23:22:48 index.ts[info]: initializationExpressServer() 
+2025-01-26 23:22:48 index.ts[info]: initializeRoutes() 
+2025-01-26 23:22:48 index.ts[info]: SERVER listening on PORT:8001 
+2025-01-26 23:22:52 index.ts[info]: initializationExpressServer() 
+2025-01-26 23:22:52 index.ts[info]: initializeRoutes() 
+2025-01-26 23:22:52 index.ts[info]: SERVER listening on PORT:8001 
+2025-01-26 23:23:09 index.ts[info]: controller.dummy.getDummy 
+2025-01-26 23:23:09 index.ts[info]: services.dummy.getDummy 
+2025-01-26 23:23:09 index.ts[info]: helper.response_builder.responseBuilder( 
+2025-01-26 23:23:09 index.ts[info]: ::1 - - [26/Jan/2025:17:53:09 +0000] "GET /api/v1/dummy HTTP/1.1" 200 82
+ 
+2025-01-26 23:23:09 index.ts[info]: ::1 - - [26/Jan/2025:17:53:09 +0000] "GET /favicon.ico HTTP/1.1" 404 150
+ 
+2025-01-26 23:23:29 index.ts[error]: ERROR occurred in datasources/mongodb/helpers/database.mongoConnection()  Authentication failed. MongoServerError: Authentication failed.
+    at Connection.sendCommand (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connection.ts:545:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connection.ts:617:22)
+    at async executeScram (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/auth/scram.ts:113:20)
+    at async ScramSHA256.auth (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/auth/scram.ts:60:12)
+    at async performInitialHandshake (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connect.ts:164:7)
+    at async connect (/home/naveeny/project_ecom/backend/node_modules/mongodb/src/cmap/connect.ts:43:5)

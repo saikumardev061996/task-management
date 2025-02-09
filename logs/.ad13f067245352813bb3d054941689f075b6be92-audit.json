@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 15
+    },
+    "auditLog": "/home/naveeny/project_ecom/backend/logs/.ad13f067245352813bb3d054941689f075b6be92-audit.json",
+    "files": [
+        {
+            "date": 1737913889398,
+            "name": "/home/naveeny/project_ecom/backend/logs/careerpedia-2025-01-26.log",
+            "hash": "dd5df7d292a19b214c85af2e805a574599197ffee63547af2847d600976270bc"
+        }
+    ],
+    "hashType": "sha256"
+}
